@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:social/screens/home_screen.dart';
+import 'package:social/utils/colors.dart';
+import 'package:social/screens/welcome_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,11 +13,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        useMaterial3: true
+        useMaterial3: true,
+        scaffoldBackgroundColor: AppColors.background
       ),
-      home: const HomeScreen()
+      home: const WelcomeScreen()
     );
   }
 }
