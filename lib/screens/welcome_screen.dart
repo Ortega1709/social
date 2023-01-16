@@ -1,9 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:social/components/button_component.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:social/screens/login_screen.dart';
-import 'package:social/utils/typographie.dart';
-
 import '../utils/colors.dart';
+import '../utils/typography.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
@@ -13,45 +13,25 @@ class WelcomeScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: const EdgeInsets.all(24.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Center(
-                  child: Column(
-                children: [
-                  Container(
-                    width: 160,
-                    height: 160,
-                    decoration: BoxDecoration(
-                        image: DecorationImage(
-                            fit: BoxFit.contain,
-                            filterQuality: FilterQuality.high,
-                            image: AssetImage("assets/images/logo.png"))),
-                  ),
-                  TypoText(text: "Bienvenue !", color: AppColors.text).large()
-                ],
-              )),
+              TypoText(text: AppLocalizations.of(context)!.first, color: AppColors.text_secondary).Large(),
+              TypoText(text: AppLocalizations.of(context)!.second, color: AppColors.text_secondary).Large(),
+              SizedBox(height: 20.0),
+              TypoText(
+                  text: AppLocalizations.of(context)!.presentationApp, color: AppColors.text_tertiary).long(),
+
+
+
               Spacer(),
-              CupertinoButton(
-                  color: Colors.black87,
+              ButtonComponent(
                   onPressed: () {
-                    Navigator.of(context).push(
-                        MaterialPageRoute(builder: (context) => LoginScreen()));
+                    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_) => LoginScreen()));
                   },
-                  child:
-                      TypoText(text: "Connexion", color: AppColors.textButton)
-                          .h3()),
-              SizedBox(height: 7.0),
-              CupertinoButton(
-                  color: Colors.black87,
-                  onPressed: () {
-                    Navigator.of(context).push(
-                        MaterialPageRoute(builder: (context) => LoginScreen()));
-                  },
-                  child: TypoText(
-                          text: "Enregistrement", color: AppColors.textButton)
-                      .h3()),
+                  child: TypoText(text: AppLocalizations.of(context)!.getStarted, color: AppColors.text_secondary).h2(),
+                  color: AppColors.button_primary)
             ],
           ),
         ),

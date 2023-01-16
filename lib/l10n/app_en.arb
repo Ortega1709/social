@@ -1,0 +1,18 @@
+{
+
+  "first": "Welcome to ",
+  "second": "application !",
+  "presentationApp": "Social is an application allowing you to make different posts and to have a complete visualization of all these posts.",
+  "getStarted": "Get started",
+  "authentication": "Authentication",
+  "pleaseAuth": "Authenticate to access your account",
+  "pleaseCreate": "Please create an account to continue",
+  "createAccount": "Create an account",
+  "signin": "Sign in",
+  "dontHaveAccount": "Don't have a account ?",
+  "haveAccount": "Already have a account ?",
+  "email": "Email",
+  "password": "Password",
+  "username": "Username"
+
+}

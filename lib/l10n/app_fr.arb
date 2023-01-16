@@ -1,0 +1,18 @@
+{
+
+  "first": "Bienvenue sur ",
+  "second": "l'application !",
+  "presentationApp": "Social est une application permettant de faire des différents poste et d'avoir une visualisation complète de tous ces postes.",
+  "getStarted": "Commencer",
+  "authentication": "Authentification",
+  "pleaseAuth": "Authentifiez-vous afin d'accéder à votre compte",
+  "pleaseCreate": "Veuillez créer un compte avant de continuer",
+  "createAccount": "Créer un compte",
+  "signin": "S'authentifier",
+  "dontHaveAccount": "Vous n'avez pas de compte ?",
+  "haveAccount": "Vous avez déjà un compte ?",
+  "email": "E-mail",
+  "password": "Mot de passe",
+  "username": "Nom d'utilisateur"
+
+}
